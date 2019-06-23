@@ -33,15 +33,15 @@
 
     <tbody>
       <% (@first_day..@last_day).each do |day| %>
-        <tr>
-          <td><%= day %></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
+  　　<tr>
+        <td><%= l(day, format: :short) %></td>
+        <td><%= $days_of_the_week[day.wday] %></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
       <% end %>
     </tbody>
   </table>
